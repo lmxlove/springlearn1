@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * @since 2022/11/10 11:00
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class UserEntity {
   private  Integer id;
@@ -37,5 +36,10 @@ public class UserEntity {
             "id=" + id +
             ", name='" + name + '\'' +
             '}';
+  }
+
+  public UserEntity(Integer id, String name) {
+    this.id = id;
+    this.name = name;
   }
 }
