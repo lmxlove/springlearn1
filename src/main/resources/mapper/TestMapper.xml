@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.springlearn1.Dao.TestMapper">
+
+<select id="test" resultType="java.lang.String">
+    select  name from user limit 1
+    </select>
+
+<insert id="get" >
+    insert into user values(2,"jjj")
+    </insert>
+
+<update id="update">
+    update user set name="kkkkk" limit 1
+    </update>
+
+<delete id="delete">
+    delete  from user where id='2'
+    </delete>
+
+<select id="getUserInfo" resultType="com.example.springlearn1.Entity.UserEntity">
+    select*from user where id=#{id}
+    </select>
+</mapper>
+
+
